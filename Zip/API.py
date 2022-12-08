@@ -20,15 +20,11 @@ file_download('https://www.jodidata.org/_resources/files/downloads/gas-data/jodi
 
 # Extrair arquivo zip
 with ZipFile('jodi_gas_csv_beta.zip', 'r') as zip_object:
-    zip_object.extractall('Zip')
+    zip_object.extractall()
 
-# Pegando o nome do arquivo
-nome_arquivo_csv = zip_object.namelist()
-print(nome_arquivo_csv)
-
+    
 # Mexendo no arquivo csv para json
-
-with open(f'zip/{nome_arquivo_csv[0]}', 'r') as arquivo_csv:
+with open('jodi_gas_beta.csv', 'r') as arquivo_csv:
     leitura = csv.reader(arquivo_csv)
 
     serial_id = {}
@@ -54,7 +50,7 @@ with open(f'zip/{nome_arquivo_csv[0]}', 'r') as arquivo_csv:
 
 
 # Transformando em JSON
-with open('zip/new_jodi_gas_csv_beta.json', 'w') as arquivo_csv:
+with open('new_jodi_gas_csv_beta.json', 'w') as arquivo_csv:
     json.dump(api, arquivo_csv, indent=1)
 
 print('FIM DO PROGRAMA')
