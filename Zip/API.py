@@ -34,9 +34,7 @@ with open('jodi_gas_beta.csv', 'r') as arquivo_csv:
 
 # Estou criando uma lista com o FLOW_BREAKDOWN para puxar com referência de id na procura por lista
     for csv in leitura:
-        for c in leitura:
             csv[3] = []
-            serial_id['FLOW_BREAKDOWN_id'] = c[3]
             serial_id['REF_AREA'] = csv[0]
             serial_id['ENERGY_PRODUCT'] = csv[2]
             serial_id['UNIT_MEASURE'] = csv[4]
