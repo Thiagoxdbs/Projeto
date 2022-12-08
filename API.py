@@ -54,7 +54,7 @@ with open('nome_arquivo_csv[0]', 'r') as arquivo_csv:
 
 
 # Transformando em JSON
-with open('new_jodi_gas_csv_beta.json', 'w') as arquivo_csv:
+with open(f'{new_jodi_gas_csv_beta.json}', 'w') as arquivo_csv:
     json.dump(api, arquivo_csv, indent=1)
 
 print('FIM DO PROGRAMA')
