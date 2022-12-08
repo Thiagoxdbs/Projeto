@@ -28,7 +28,7 @@ print(nome_arquivo_csv)
 
 # Mexendo no arquivo csv para json
 
-with open(f'{nome_arquivo_csv[0]}', 'r') as arquivo_csv:
+with open(f'zip/{nome_arquivo_csv[0]}', 'r') as arquivo_csv:
     leitura = csv.reader(arquivo_csv)
 
     serial_id = {}
@@ -54,7 +54,7 @@ with open(f'{nome_arquivo_csv[0]}', 'r') as arquivo_csv:
 
 
 # Transformando em JSON
-with open('new_jodi_gas_csv_beta.json', 'w') as arquivo_csv:
+with open('zip/new_jodi_gas_csv_beta.json', 'w') as arquivo_csv:
     json.dump(api, arquivo_csv, indent=1)
 
 print('FIM DO PROGRAMA')
