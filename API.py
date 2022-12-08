@@ -24,12 +24,11 @@ with ZipFile('jodi_gas_csv_beta.zip', 'r') as zip_object:
 
 # Pegando o nome do arquivo
 nome_arquivo_csv = zip_object.namelist()
-# Nome do arquivo
-print(f'O nome do arquivo é {nome_arquivo_csv}')
+
 
 # Mexendo no arquivo csv para json
 
-with open(f'Zip/{nome_arquivo_csv[0]}', 'r') as arquivo_csv:
+with open('nome_arquivo_csv[0]', 'r') as arquivo_csv:
     leitura = csv.reader(arquivo_csv)
 
     serial_id = {}
@@ -55,7 +54,7 @@ with open(f'Zip/{nome_arquivo_csv[0]}', 'r') as arquivo_csv:
 
 
 # Transformando em JSON
-with open(f'Zip/new_jodi_gas_csv_beta.json', 'w') as arquivo_csv:
+with open('new_jodi_gas_csv_beta.json', 'w') as arquivo_csv:
     json.dump(api, arquivo_csv, indent=1)
 
 print('FIM DO PROGRAMA')
